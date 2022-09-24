@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.tutorialsninja.automation.base.Base;
+import com.tutorialsninja.automation.framework.Elements;
 
 public class SearchPage {
 
@@ -24,5 +25,29 @@ public class SearchPage {
 	
 	@FindBy(xpath="//p[contains(text(),'There is no product that matches the search criter')]")
 	public static WebElement noproductmessage;
+	
+	@FindBy(xpath="//span[text()='Add to Cart'][1]")
+	public static WebElement addtocart;
+	
+	@FindBy(xpath="//span[normalize-space()='Shopping Cart']")
+	public static WebElement shoppingcart;
+	
+	public static void searchProduct() {
+		
+		Elements.TypeText(search, Base.reader.getProduct());
+		Elements.click(searchbutton);
+		
+	}
+	
+	public static void firstProduct() {
+		
+		Elements.click(addtocart);
+		
+	}
+	
+	public static void navigatetoshoppingcart() {
+		
+		Elements.click(shoppingcart);
+	}
 	
 }

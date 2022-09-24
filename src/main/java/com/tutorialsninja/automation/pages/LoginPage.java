@@ -40,4 +40,12 @@ public class LoginPage {
 		
 	}
 	
+	public static void doLogin() {
+		
+		Elements.TypeText(emailfield, Base.reader.getUsername());
+		Elements.TypeText(emailfield, Base.reader.getPassword());
+		Elements.click(login);
+		
+	}
+	
 }

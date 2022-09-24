@@ -1,7 +1,5 @@
 package com.tutorialsninja.automation.stepdef;
 
-import java.util.Map;
-
 import org.junit.Assert;
 
 import com.tutorialsninja.automation.base.Base;

@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.tutorialsninja.automation.base.Base;
+import com.tutorialsninja.automation.framework.Elements;
 
 public class HeadersSection {
 	
@@ -22,5 +23,12 @@ public class HeadersSection {
 	
 	@FindBy(linkText="Login")
 	public static WebElement login;
+	
+	public static void navigateToLoginPage() {
+		
+		Elements.click(myAccountLink);
+		Elements.click(login);
+		
+	}
 	
 }
