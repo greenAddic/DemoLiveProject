@@ -18,6 +18,7 @@ public class Orders {
 	LoginPage loginpage = new LoginPage();
 	SearchPage searchpage = new SearchPage();
 	ShoppingCartPage shoppingcartpage = new ShoppingCartPage();
+	Browser browser = new Browser();	
 	
 	@Given("^i login into the page$")
 	public void i_login_into_the_page() {
